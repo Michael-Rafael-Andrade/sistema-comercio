@@ -1,0 +1,75 @@
+<div class="dashboard-header">
+  <h1>{{title}}</h1>
+  <p class="subtitulo">Visão geral do acervo e operações de caixa</p>
+</div>
+
+{{! Cards de Métricas / Indicadores }}
+<div class="grid-cards">
+  <div class="card-stat card-azul">
+    <div class="card-titulo">Total de Produtos</div>
+    <div class="card-valor">{{estatisticas.totalProdutos}}</div>
+    <div class="card-rodape">Itens registrados</div>
+  </div>
+
+  <div class="card-stat card-verde">
+    <div class="card-titulo">Itens em Estoque</div>
+    <div class="card-valor">{{estatisticas.totalEstoque}}</div>
+    <div class="card-rodape">Unidades físicas</div>
+  </div>
+
+  <div class="card-stat card-roxo">
+    <div class="card-titulo">Valor do Estoque</div>
+    <div class="card-valor">R$ {{estatisticas.valorTotalEstoque}}</div>
+    <div class="card-rodape">Patrimônio em acervo</div>
+  </div>
+
+  <div class="card-stat card-vermelho">
+    <div class="card-titulo">Alerta Reposição</div>
+    <div class="card-valor">{{estatisticas.itensEsgotados}}</div>
+    <div class="card-rodape">Itens esgotados</div>
+  </div>
+</div>
+
+{{! Ações Rápidas }}
+<div class="secao-acoes">
+  <h2>Ações Rápidas</h2>
+  <div class="botoes-atalho">
+    <a href="/produtos/novo" class="btn btn-principal btn-lg">
+      + Novo Cadastro
+    </a>
+    <a href="/produtos" class="btn btn-editar btn-lg">
+      📦 Gerenciar Acervo
+    </a>
+  </div>
+</div>
+
+{{! Tabela de Itens Recentes }}
+<div class="secao-recentes">
+  <h2>Últimos Itens Cadastrados</h2>
+  {{#if ultimosProdutos.length}}
+    <table class="tabela-dados">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Categoria</th>
+          <th>Preço</th>
+          <th>Estoque</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each ultimosProdutos}}
+          <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.titulo}}</td>
+            <td>{{this.categoria}}</td>
+            <td>R$ {{this.preco}}</td>
+            <td>{{this.quantidade}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{else}}
+    <p class="alerta-vazio">Nenhum produto cadastrado até o momento.</p>
+  {{/if}}
+</div>

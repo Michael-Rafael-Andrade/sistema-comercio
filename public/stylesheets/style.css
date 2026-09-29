@@ -1,0 +1,184 @@
+/* Estilo CSS - Formatação */
+body {
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Tabelas */
+.tabela-dados {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tabela-dados th,
+.tabela-dados td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 8px  14px;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-principal {
+  background-color: #27ae60;
+  color: #ffffff;
+}
+
+.btn-editar {
+  background-color: #2980b9;
+  color: #ffffff;
+}
+
+.btn-excluir {
+  background-color: #c0392b;
+  color: #ffffff;
+}
+
+.btn-cancelar {
+  background-color: #7f8c8d;
+  color: #ffffff;
+}
+
+/* Formulário */
+.form-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.campo-form {
+  margin-bottom: 15px;
+}
+
+.campo-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.campo-form input,
+.campo-form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.alerta-erro{
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.alerta-vazio {
+  background-color: #e2e3e5;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+/* Dashboard e Métricas */
+.dashboard-header {
+  margin-bottom: 25px;
+}
+
+.subtitulo {
+  color: #7f8c8d;
+  margin-top: -10px;
+  font-size: 15px;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card-stat {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  border-left: 5px solid #ccc;
+}
+
+.card-azul { border-left-color: #2980b9; }
+.card-verde { border-left-color: #27ae60; }
+.card-roxo { border-left-color: #8e44ad; }
+.card-vermelho { border-left-color: #c0392b; }
+
+.card-titulo {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #7f8c8d;
+  font-weight: bold;
+}
+
+.card-valor {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 10px 0 5px 0;
+}
+
+.card-rodape {
+  font-size: 12px;
+  color: #95a5a6;
+}
+
+/* Ações Rápidas */
+.secao-acoes {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+.secao-acoes h2,
+.secao-recentes h2 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.botoes-atalho {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-lg {
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.secao-recentes {
+  margin-top: 20px;
+}

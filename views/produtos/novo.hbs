@@ -1,0 +1,40 @@
+<h1>{{title}}</h1>
+
+{{! Exibe mensagem de erro caso ocorra validação no Model }}
+{{#if erro}}
+<div class="alerta-erro">
+    {{erro}}
+</div>
+{{/if}}
+
+{{! Formulário com envio via POST para a rota /produtos/novo }}
+<form action="produtos/novo" method="POST" class="form-container">
+    <div class="campo-form">
+        <label for="titulo">Título do Produto:</label>
+        <input type="text" id="titulo" name="titulo" required />
+    </div>
+
+    <div class="campo-form">
+        <label for="categoria">Categoria:</label>
+        <input type="text" id="categoria" name="categoria" required />
+    </div>
+
+    <div class="campo-form">
+        <label for="preco">Preço (R$):</label>
+        <input type="number" id="preco" name="preco" step="0.01" min="0" required />
+    </div>
+
+    <div class="campo-form">
+        <label for="quantidade">Quantidade em Estoque:</label>
+        <input type="number" id="quantidade" name="quantidade" min="0" required />
+    </div>
+
+    <div class="botoes-form">
+        <button type="submit" class="btn btn-principal">
+            Salvar Produto
+        </button>
+        <a href="/produtos" class="btn btn-cancelar">
+            Cancelar
+        </a>
+    </div>
+</form>
